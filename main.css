@@ -1,0 +1,17 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#link {
+  margin-top: 50%;
+  margin-left: 83%;
+}

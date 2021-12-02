@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake & Apple</title>
+    <link rel="icon" href="./images/images.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./game.js"></script>
+</head>
+<body style="background-image: url(./images/snake-pass-key-art-no-logo.jpg);">
+
+    <!-- #gameContainer is the main game board-->
+    <div id="game">
+    <div id="gameContainer"></div>
+    <!-- #scoreContainer contains the scores  -->
+    <div id="scoreContainer">
+      <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
+      <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
+    </div>
+  </div>
+
+    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+    <div id="onScreenControllers">
+      <button id="leftButton">◀️</button>
+      <div>
+        <button id="upButton">🔼</button>
+        <button id="downButton">🔽</button>
+      </div>
+      <button id="rightButton">▶️</button>
+    </div>
+</body>
+</html>
