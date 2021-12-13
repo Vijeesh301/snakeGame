@@ -121,7 +121,7 @@ const moveSnake = () => {
     clearInterval(moveSnakeInterval);
     if (
       !alert(
-        `${player + ", " + batch} :have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
+        `${player + ", " + batch} : have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
       )
     )
       window.location.reload();
@@ -159,7 +159,7 @@ createGameBoardPixels();
 createFood();
 
 // Move snake:
-var moveSnakeInterval = setInterval(moveSnake, 80);
+var moveSnakeInterval = setInterval(moveSnake, 60);
 
 // Call change direction function on keyboard key-down event:
 addEventListener("keydown", e => changeDirection(e.keyCode));
