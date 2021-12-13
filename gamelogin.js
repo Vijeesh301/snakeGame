@@ -17,6 +17,9 @@ function loginformsubmit() {
       window.location.href="main.html";
     }
 
+    username.value = username.value.toUpperCase();
+    username1.value = username1.value.toUpperCase();
+
     {
       var nameID = document.getElementById("username").value;
       var batchID = document.getElementById("username1").value;

@@ -121,7 +121,7 @@ const moveSnake = () => {
     clearInterval(moveSnakeInterval);
     if (
       !alert(
-        `${player + ", " + batch} have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
+        `${player + ", " + batch} :have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
       )
     )
       window.location.reload();
