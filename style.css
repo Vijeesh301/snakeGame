@@ -50,7 +50,7 @@ body {
 
 /* SCORE STYLES */
 #scoreContainer {
-  width: 40vw;
+  width: 45vw;
   display: flex;
   margin: auto;
   justify-content: space-around;

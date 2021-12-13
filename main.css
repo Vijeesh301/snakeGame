@@ -11,7 +11,32 @@ body {
   position: relative;
 }
 
+#gametitle {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 3%;
+}
+
+#login {
+  margin-top: 20%;
+  color: rgb(255, 255, 255);
+  padding-left: 81%;
+}
+
+#inputbox {
+  width: 250px;
+}
+
+#button {
+  width: 250px;
+}
+
 #link {
-  margin-top: 50%;
-  margin-left: 83%;
+  margin-left: 79%;
+}
+
+@media only screen and (max-width: 768px) {
+  .h-custom {
+    height: 100%;
+  }
 }

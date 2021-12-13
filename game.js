@@ -15,6 +15,9 @@ const createGameBoardPixels = () => {
   }
 };
 
+var player = document.getElementById("name").innerText = localStorage.getItem("id1");
+var batch = document.getElementById("batch").innerText = localStorage.getItem("id2");
+
 // This variable always holds the updated array of game pixels created by createGameBoardPixels() :
 const gameBoardPixels = document.getElementsByClassName("gameBoardPixel");
 
@@ -118,7 +121,7 @@ const moveSnake = () => {
     clearInterval(moveSnakeInterval);
     if (
       !alert(
-        `You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
+        `${player + ", " + batch} have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
       )
     )
       window.location.reload();
@@ -156,7 +159,7 @@ createGameBoardPixels();
 createFood();
 
 // Move snake:
-var moveSnakeInterval = setInterval(moveSnake, 60);
+var moveSnakeInterval = setInterval(moveSnake, 80);
 
 // Call change direction function on keyboard key-down event:
 addEventListener("keydown", e => changeDirection(e.keyCode));
