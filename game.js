@@ -115,13 +115,36 @@ const moveSnake = () => {
 
   let nextSnakeHeadPixel = gameBoardPixels[currentSnakeHeadPosition];
 
+  /// Time and Date
+
+  var timeElement = document.getElementById ("currentTime");
+
+  function putZero(nm){
+    return nm<10?"0"+nm:nm;
+  }
+
+    function showTime(){
+  
+    var dt = new Date();
+    var hours = dt.getHours();
+    var amorpm = hours>12?"PM":"AM";
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var dateString = putZero(hours%12) + ":" + putZero(dt.getMinutes()) + ":" + putZero(dt.getSeconds()) + " " + amorpm + "/" + dt.getDate() + "-" + months [dt.getMonth()] + "-" + dt.getFullYear();
+    timeElement.innerHTML = dateString;
+    setTimeout (function (){
+      showTime();
+    }, 1000);
+  }
+
+  showTime();
+
   // Kill snake if it bites itself:
   if (nextSnakeHeadPixel.classList.contains("snakeBodyPixel")) {
     // Stop moving the snake
     clearInterval(moveSnakeInterval);
     if (
       !alert(
-        `${player + ", " + batch} : have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
+        `${player + ", " + batch} : have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks on ${Date()}.`
       )
     )
       window.location.reload();
@@ -148,7 +171,7 @@ const moveSnake = () => {
     snakeLength = snakeLength + 100;
     createFood();
   }
-};
+}
 
 /// CALL THE FOLLOWING FUNCTIONS TO RUN THE GAME:
 
